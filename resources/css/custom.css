@@ -4,6 +4,10 @@ IMPRESS.JS CUSTOM STYLES
 #########################################################
 */
 
+strong {
+	font-weight: 700;
+}
+
 /* ### LINKS ###### */
 
 body a {
@@ -16,6 +20,14 @@ body a {
 
 figure {
 	margin: 0;
+}
+
+/* ### LINKS ###### */
+
+.red a {
+	font-weight: 300;
+	color: #C00000;
+	font-style: italic;
 }
 
 /* ### LISTS ###### */
