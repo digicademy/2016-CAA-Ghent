@@ -71,20 +71,20 @@
             <h4><strong>24.11.2016</strong> | Ghent University</h4>
             <h4 style="margin-top: -15px"><a href="http://www.caanlfl.nl/?q=node/51">Joint Chapter Meeting CAA-DE and CAA-NL-FL 2016</a></h4>
 
-            <h1 class="down-100">Exploring the potential of graph databases for network research</h1>
+            <h1 class="down-75">Exploring the potential of graph databases for network research</h1>
 
             <h2 class="red">through the analysis of clustering in bipartite graphs</h2>
 
-            <h4 class="down-100">
+            <h4 class="down-75">
                 <strong>Slides:</strong>
                 <a href="https://digicademy.github.io/2016-CAA-Ghent/" title="View the presentation online">
 	                https://digicademy.github.io/2016-CAA-Ghent/
                 </a>
             </h4>
 
-            <h5>
-                <a href="http://www.adwmainz.de/mitarbeiter/profil/aline-deicke.html">Aline Deicke</a> |
-                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+            <h5><a href="http://www.adwmainz.de/mitarbeiter/profil/aline-deicke.html">Aline Deicke</a>, <a href="http://www.digitale-akademie.de">Digital Academy</a> of the <a href="http://www.adwmainz.de">Academy of Sciences and Literature | Mainz</a> </h5>
+	        <h5 class="up-15">
+	            <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
                 <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
                 <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
                 <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
@@ -122,7 +122,7 @@
             <ul>
                 <li>Complex data:
 	                <ul>
-		                <li>analyses built upon already existing, detailed data sets</li>
+		                <li>Analyses built upon already existing, detailed data sets</li>
 		                <li>Data allows for a wide range of thematical subjects and thus, study designs</li>
 	                </ul>
                 </li>
@@ -148,6 +148,19 @@
 
         <div class="step">
 
+	        <h2>Study design</h2>
+
+	        <ul class="medium">
+		        <li>Unweighted, undirected 2-mode-network consisting of <strong>graves</strong> and <strong>object types</strong> contained in those graves</li>
+		        <li>64 graves, 41 object types, 338 edges</li>
+	        </ul>
+
+	        <figure class="mfp-lightbox">
+		        <a href="resources/img/UseCase.png">
+			        <img src="resources/img/UseCase.png" style="width: 50%; margin-left: 200px">
+				</a>
+	        </figure>
+
         </div>
 
         <div class="step">
@@ -159,16 +172,34 @@
 
         <div class="step">
 
-	        <p>Example queries/query (long chain, e.g. 5-paths</p>
+	        <h2>Advantages of graph databases</h2>
 
-	        <p>image of backend with one visualization and one table</p>
+	        <div class="row down-50">
 
-	        <p>--> especially performant in executing queries of chains/traversing a graph, which can be very costly in, for example, relational databases (s. Panama Papers)</p>
+		        <div class="five columns">
 
+			        <figure class="mfp-lightbox">
+				        <a href="resources/img/Neo4j_backend.png">
+				            <img src="resources/img/Neo4j_backend.png">
+				        </a>
+				        <figcaption class="x-small"><a href="http://neo4j.com/">Neo4J</a></figcaption>
+			        </figure>
+
+		        </div>
+
+		        <div class="seven columns">
+			        <ul class="medium">
+				        <li>High performance for querying chains of connections</li>
+				        <li>Storing of data as nodes and edges introduces relationship-based thinking already in the early stages of data preparation and acquisition</li>
+				        <li>Facilitates querying for data that is already structured in a way needed for network research</li>
+			        </ul>
+		        </div>
+
+	        </div>
         </div>
 
         <div class="step">
-            <h1 class="red">01</h1>
+            <h1 class="red">04</h1>
             <h2 class="line-height-one-five">
                 Clustering in bipartite graphs
             </h2>
@@ -180,17 +211,17 @@
 
             <ul class="medium">
 	            <li><a href="http://dx.doi.org/10.1038/30918">Watts/Strogatz 1998: Collective dynamics of ‘small-world’ networks</a></li>
-                <li>Measure of cohesion</li>
-	            <li>Defines "cliquishness of a typical neighbourhood" (Watts/Strogatz 1998, 440)</li>
-                <li>High Clustering Coefficient associated with
+                <li>Measure of cohesion; defines "cliquishness of a typical neighbourhood" (Watts/Strogatz 1998, 440)</li>
+	            <li>Key concept: triadic closure (Simmel)</li>
+                <li>High Clustering Coefficient associated with, for example,
                     <ul>
-                        <li>dense (social) structures</li>
-                        <li>efficiency, effectiveness</li>
-                        <li>tendency towards homogeneity</li>
-	                    <li>
-		                    Beeinflussungs- und Konsensbildungsprozesse, Grundlage für These Informationsredundanz von Gruppenakteuren sowie Annahme Fähigkeit zu kollektiver Aktion</li>
+                        <li>Dense (social) structures (observed in most real-world networks)</li>
+                        <li>Localized closeness, redundancy and multiplicity of ties at the cost of effective longer connectivity (strength of weak ties)</li>
+                        <li>Tendency towards homogeneity; processes of influencing and consolidation</li>
+	                    <li>Small-world properties (low network density, high clustering, average short path length)</li>
                     </ul>
                 </li>
+	            <li>Global and local clustering coefficient; for one or both modes</li>
             </ul>
 
         </div>
@@ -199,47 +230,62 @@
 
 		    <h2>Clustering Coefficient</h2>
 
-		    <h3 class="red up-25">One-mode networks</h3>
+		    <h3 class="red up-15">One-mode networks</h3>
 
-		    <p class="down-50">C(p) = </p>
+		    <div class="row down-50">
 
-		    <div id="greuler1" class="down-50"></div>
-		    <script>
-			    'use strict';
-			    greuler({
-				    target: '#greuler1',
-				    width: 640,
-				    height: 200,
-				    avoidOverlaps: true,
-				    data: {
-					    nodes: [
-						    {id: 0, fill: '#C00000', r: 25, fixed: true, x: 100, y: 50},
-						    {id: 1, fill: '#C00000', r: 25, fixed: true, x: 260, y: 50},
-						    {id: 2, fill: '#C00000', r: 25, fixed: true, x: 180, y: 150},
-						    {id: 3, fill: '#C00000', r: 25, fixed: true, x: 400, y: 100},
-						    {id: 4, fill: '#C00000', r: 25, fixed: true, x: 500, y: 120},
-						    {id: 5, fill: '#C00000', r: 25, fixed: true, x: 600, y: 100}
+			    <div class="six columns">
+				    <figure>
+					    <img src="resources/img/Opsahl2013_COneMode.png" style="width: 80%">
+					    <figcaption class="x-small">(Opsahl 2013, 160)</figcaption>
+				    </figure>
 
-					    ],
-					    links: [
-						    {source: 0, target: 1},
-						    {source: 1, target: 2},
-						    {source: 2, target: 0},
-						    {source: 3, target: 4},
-						    {source: 4, target: 5}
-					    ]
-				    }
-			    }).update()
-		    </script>
+				    <p class="medium down-25"><span class="red">→</span>  Fraction between the number of observed triangles to all possible triangles in one network</p>
+			    </div>
+
+			    <div class="six columns">
+
+				    <div id="greuler1"></div>
+				    <script>
+					    'use strict';
+					    greuler({
+						    target: '#greuler1',
+						    width: 640,
+						    height: 320,
+						    avoidOverlaps: true,
+						    data: {
+							    nodes: [
+								    {id: 0, fill: '#C00000', r: 25, fixed: true, x: 100, y: 50},
+								    {id: 1, fill: '#C00000', r: 25, fixed: true, x: 260, y: 50},
+								    {id: 2, fill: '#C00000', r: 25, fixed: true, x: 180, y: 150},
+								    {id: 3, fill: '#C00000', r: 25, fixed: true, x: 75, y: 250},
+								    {id: 4, fill: '#C00000', r: 25, fixed: true, x: 180, y: 270},
+								    {id: 5, fill: '#C00000', r: 25, fixed: true, x: 285, y: 250}
+
+							    ],
+							    links: [
+								    {source: 0, target: 1},
+								    {source: 1, target: 2},
+								    {source: 2, target: 0},
+								    {source: 3, target: 4},
+								    {source: 4, target: 5}
+							    ]
+						    }
+					    }).update()
+				    </script>
+
+			    </div>
+
+		    </div>
 
 	    </div>
 
 	    <div class="step">
 
-		    <h2>Two- to One-Mode</h2>
-		    <h3 class="red up-25">6-cycles, stars and squares/triads and dyads</h3>
+		    <h2>Two-mode- and one-mode-data</h2>
+		    <h3 class="red up-15">6-cycles, stars and squares vs. triads and dyads</h3>
 
-		    <!-- list all two-modes and their one-mode-equivalents -->
+		    <!-- list all two-modes and their one-mode-equivalents; add dyad from square and from star with same labels M1 -->
 
 		    <div class="row down-25">
 			    <div class="seven columns">
@@ -251,26 +297,40 @@
 					    greuler({
 						    target: '#greuler4',
 						    width: 570,
-						    height: 580,
+						    height: 400,
 						    avoidOverlaps: true,
 						    data: {
 							    nodes: [
-								    {id: 0, fill: '#C00000', r: 25, label: 'M1-1', fixed: true, x: 120, y: 250},
-								    {id: 1, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 30, y: 200},
-								    {id: 2, fill: '#C00000', r: 25, label: 'M1-2', fixed: true, x: 30, y: 100},
-								    {id: 3, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 120, y: 50},
-								    {id: 4, fill: '#C00000', r: 25, label: 'M1-3', fixed: true, x: 210, y: 100},
-								    {id: 5, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 210, y: 200},
-								    {id: 6, fill: '#C00000', r: 25, label: 'M1-4', fixed: true, x: 120, y: 450},
-								    {id: 7, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 30, y: 530},
-								    {id: 8, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 120, y: 350},
-								    {id: 9, fill: '#222222', r: 25, label: 'M2-6', fixed: true, x: 210, y: 530},
-								    {id: 10, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 350, y: 200},
-								    {id: 11, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 440, y: 50},
-								    {id: 12, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 530, y: 200},
-								    {id: 13, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 350, y: 530},
-								    {id: 14, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 440, y: 350},
-								    {id: 15, fill: '#222222', r: 25, label: 'M2-6', fixed: true, x: 530, y: 530}
+								    {id: 0, fill: '#C00000', label: ' ', fixed: true, x: 80, y: 170},
+								    {id: 1, fill: '#222222', label: '2', fixed: true, x: 30, y: 130},
+								    {id: 2, fill: '#C00000', label: ' ', fixed: true, x: 30, y: 70},
+								    {id: 3, fill: '#222222', label: '1', fixed: true, x: 80, y: 30},
+								    {id: 4, fill: '#C00000', label: ' ', fixed: true, x: 130, y: 70},
+								    {id: 5, fill: '#222222', label: '3', fixed: true, x: 130, y: 130},
+
+								    {id: 6, fill: '#C00000', label: ' ', fixed: true, x: 250, y: 110},
+								    {id: 7, fill: '#222222', label: '2', fixed: true, x: 200, y: 160},
+								    {id: 8, fill: '#222222', label: '1', fixed: true, x: 250, y: 50},
+								    {id: 9, fill: '#222222', label: '3', fixed: true, x: 300, y: 160},
+
+								    {id: 10, fill: '#222222', label: '2', fixed: true, x: 420, y: 160},
+								    {id: 11, fill: '#222222', label: '1', fixed: true, x: 470, y: 60},
+								    {id: 12, fill: '#222222', label: '3', fixed: true, x: 520, y: 160},
+
+								    {id: 13, fill: '#C00000', label: '1', fixed: true, x: 30, y: 320},
+								    {id: 14, fill: '#222222', label: ' ', fixed: true, x: 80, y: 270},
+								    {id: 15, fill: '#C00000', label: '2', fixed: true, x: 130, y: 320},
+								    {id: 16, fill: '#222222', label: ' ', fixed: true, x: 80, y: 320},
+								    {id: 17, fill: '#222', label: ' ', fixed: true, x: 80, y: 370},
+
+								    {id: 18, fill: '#C00000', label: '1', fixed: true, x: 200, y: 270},
+								    {id: 19, fill: '#222', label: ' ', fixed: true, x: 250, y: 320},
+								    {id: 20, fill: '#C00000', label: ' ', fixed: true, x: 200, y: 370},
+								    {id: 21, fill: '#C00000', label: ' ', fixed: true, x: 300, y: 270},
+								    {id: 22, fill: '#C00000', label: '2', fixed: true, x: 300, y: 370},
+
+								    {id: 23, fill: '#C00000', label: '1', fixed: true, x: 420, y: 320},
+								    {id: 24, fill: '#C00000', label: '2', fixed: true, x: 520, y: 320}
 
 							    ],
 							    links: [
@@ -288,7 +348,15 @@
 								    {source: 12, target: 10},
 								    {source: 13, target: 14},
 								    {source: 14, target: 15},
-								    {source: 15, target: 13}
+								    {source: 15, target: 16},
+								    {source: 16, target: 13},
+								    {source: 15, target: 17},
+								    {source: 17, target: 13},
+								    {source: 18, target: 19},
+								    {source: 19, target: 20},
+								    {source: 19, target: 21},
+								    {source: 19, target: 22},
+								    {source: 23, target: 24}
 							    ]
 						    }
 					    }).update()
@@ -299,8 +367,16 @@
 			    <div class="five columns">
 
 				    <ul class="medium">
-					    <li></li>
+					    <li>Problems of projections:
+						    <ul>
+							    <li>Information loss</li>
+							    <li>Inflation of number of edges; higher clustering than in original bipartite graph</li>
+							    <li>Unimodal patterns like dyads and triads can originate from more than one bipartite pattern</li>
+					        </ul>
+					    </li>
 				    </ul>
+
+				    <p class="medium"><span class="red">→</span> One-mode-measures have to be adapted or new measures be developed</p>
 
 			    </div>
 		    </div>
@@ -309,36 +385,29 @@
 	    <div class="step">
 
 		    <h2>Bimodal Clustering Coefficient</h2>
-		    <h3 class="red up-25"><a href="http://dx.doi.org/10.1103/PhysRevE.72.056127">Lind et al. 2005</a>: Squares</h3>
-
-		    <h4>Two-Mode patterns: Square and 3-path / One-Mode projection (raus?)</h4>
+		    <h3 class="red up-15"><a href="http://dx.doi.org/10.1016/j.physa.2008.09.006">Zhang et al. 2008</a>: Squares</h3>
 
 		    <div class="row">
 
-			    <div class="six columns">
+			    <div class="four columns">
 
 				    <div id="squares"></div>
 				    <script>
 					    'use strict';
 					    greuler({
 						    target: '#squares',
-						    width: 600,
-						    height: 420,
+						    width: 400,
+						    height: 450,
 						    avoidOverlaps: true,
 						    data: {
 							    nodes: [
-								    {id: 0, fill: '#C00000', r: 25, fixed: true, x: 50, y: 120},
-								    {id: 1, fill: '#222', r: 25, fixed: true, x: 120, y: 190},
-								    {id: 2, fill: '#C00000', r: 25, fixed: true, x: 190, y: 120},
-								    {id: 3, fill: '#222', r: 25, fixed: true, x: 120, y: 50},
-								    {id: 4, fill: '#C00000', r: 25, fixed: true, x: 280, y: 120},
-								    {id: 5, fill: '#222', r: 25, fixed: true, x: 350, y: 190},
-								    {id: 6, fill: '#C00000', r: 25, fixed: true, x: 420, y: 120},
-								    {id: 7, fill: '#222', r: 25, fixed: true, x: 350, y: 50},
-								    {id: 8, fill: '#C00000', r: 25, label: '0', fixed: true, x: 50, y: 300},
-								    {id: 9, fill: '#C00000', r: 25, label: '2', fixed: true, x: 190, y: 300},
-								    {id: 10, fill: '#222', r: 25, label: '1', fixed: true, x: 50, y: 390},
-								    {id: 11, fill: '#222', r: 25, label: '3', fixed: true, x: 190, y: 390}
+								    {id: 0, fill: '#C00000', r: 25, fixed: true, x: 120, y: 170, label: 'm'},
+								    {id: 1, fill: '#222', r: 25, label: 'c'},
+								    {id: 2, fill: '#C00000', r: 25, fixed: true, x: 200, y: 280, label: 'n'},
+								    {id: 3, fill: '#222', r: 25, label: 'i'},
+								    {id: 4, fill: '#222', r: 25, label: 'a'},
+								    {id: 5, fill: '#222', r: 25, label: 'b'},
+								    {id: 6, fill: '#222', r: 25, label: 'd'}
 
 							    ],
 							    links: [
@@ -346,11 +415,9 @@
 								    {source: 1, target: 2},
 								    {source: 2, target: 3},
 								    {source: 3, target: 0},
-								    {source: 4, target: 5},
-								    {source: 5, target: 6},
-								    {source: 6, target: 7},
-								    {source: 8, target: 9},
-								    {source: 10, target: 11}
+								    {source: 0, target: 4},
+								    {source: 0, target: 5},
+								    {source: 2, target: 6}
 							    ]
 						    }
 					    }).update()
@@ -360,16 +427,25 @@
 
 			    </div>
 
-			    <div class="six columns">
+			    <div class="eight columns">
 
-				    <p class="small">Quotient between number of squares and total number of possible squares // Equation</p>
+				    <figure>
+					    <img src="resources/img/ZhangEtAl2008C4mn(i).png" style="width: 60%">
+					    <figcaption class="x-small line-height-one-five down-15">where <em>q<sub>imn</sub></em> is the number of existent squares which include <em>i</em>, <em>m</em> and <em>n</em>, and <br><em>η<sub>imn</sub> = 1 + q<sub>imn</sub></em></figcaption>
+				    </figure>
 
-				    <dl class="small">
-					    <dt>Squares</dt>
-					    <dd>for a given node <em>i</em> number of observed squares is given by number of common neighbors among its neighbors</dd>
-					    <dt>Possible Squares</dt>
-					    <dd>given by sum over each pair of neighbors of the product between their degrees, after substracting the common node <em>i</em> and an additional one if they are connected</dd>
-				    </dl>
+				    <ul class="small down-25">
+					    <li>Based on squares as basic/smallest possible cycle in bimodal networks, as triad is in unimodal networks</li>
+					    <li>Clustering coefficient <em>C<sub>4</sub>(i)</em>: fraction between number of existent squares and total number of possible squares
+						    <ul>
+							    <li>Squares: for a given node <em>i</em> the number of observed squares is given by the number of common neighbors among its neighbors</li>
+							    <li>Possible Squares: given by the sum over each pair of neighbors of the sum between their degrees, after substracting the common node <em>i</em></li>
+						    </ul>
+					    </li>
+					    <li>Based on definition by <a href="http://dx.doi.org/10.1103/PhysRevE.72.056127" title="P. G. Lind/M. C. González/H. J. Herrmann, Cycles and clustering in bipartite networks. Physical Review E 72, 2005, 056127-1–056127-9.">Lind et al. 2005</a>, but adapted to bipartite networks
+					    </li>
+					    <li class="substep">Not equivalent to concept of triadic closure, because only 2 nodes</li>
+				    </ul>
 
 			    </div>
 
@@ -380,78 +456,7 @@
 	    <div class="step">
 
 		    <h2>Bimodal Clustering Coefficient</h2>
-		    <h3 class="red up-25"><a href="http://dx.doi.org/10.1016/j.socnet.2007.04.006">Latapy et al. 2008</a>: Overlap between neighbourhoods for pairs of nodes</h3>
-
-		    <div class="row">
-
-			    <div class="six columns">
-
-				    <div id="overlap" class="down-50"></div>
-				    <script>
-					    'use strict';
-					    greuler({
-						    target: '#overlap',
-						    width: 450,
-						    height: 420,
-						    avoidOverlaps: true,
-						    data: {
-							    nodes: [
-								    {id: 0, fill: '#C00000', r: 25, label: 'u', fixed: true, x: 150, y: 280},
-								    {id: 1, fill: '#C00000', r: 25, label: 'v'},
-								    {id: 2, fill: '#222', r: 25, label: '1'},
-								    {id: 3, fill: '#222', r: 25, label: '2'},
-								    {id: 4, fill: '#222', r: 25, label: '3'},
-								    {id: 5, fill: '#222', r: 25, label: '4'},
-								    {id: 6, fill: '#222', r: 25, label: '5'},
-								    {id: 7, fill: '#222', r: 25, label: ''}
-									    // TODO: Set label topright or whatever it's called no the nodes connected to v
-
-							    ],
-							    links: [
-								    {source: 0, target: 2},
-								    {source: 0, target: 3},
-								    {source: 0, target: 4},
-								    {source: 0, target: 5},
-								    {source: 0, target: 6},
-								    {source: 1, target: 2},
-								    {source: 1, target: 3},
-								    {source: 1, target: 7}
-							    ]
-						    }
-					    }).update()
-				    </script>
-
-			    </div>
-
-			    <div class="six columns">
-
-				    <figure style="width: 50%">
-					    <img src="resources/img/LatapyEtAl2008_CC.png"></img>
-					    <figcaption class="small centered outline">cc• (u, v) = (2/6) = 0.333</figcaption>
-				    </figure>
-
-				    <figure style="width: 50%" class="down-50">
-					    <img src="resources/img/LatapyEtAl2008_minCC.png"></img>
-					    <figcaption class="small centered outline">cc• (u, v) = (2/3) = 0.666</figcaption>
-				    </figure>
-
-				    <figure style="width: 50%" class="down-50">
-					    <img src="resources/img/LatapyEtAl2008_MaxCC.png"></img>
-					    <figcaption class="small centered outline">cc• (u, v) = (2/5) = 0.4</figcaption>
-				    </figure>
-
-				    <!-- TODO: change dot (utf-8) -->
-
-			    </div>
-
-		    </div>
-
-	    </div>
-
-	    <div class="step">
-
-		    <h2>Bimodal Clustering Coefficient</h2>
-		    <h3 class="red up-25"><a href="http://dx.doi.org/10.1016/j.socnet.2011.07.001">Opsahl 2013</a>: 6-cycles and 4-paths</h3>
+		    <h3 class="red up-15"><a href="http://dx.doi.org/10.1016/j.socnet.2011.07.001">Opsahl 2013</a>: 6-cycles and 4-paths</h3>
 
 		    <div class="row down-25">
 
@@ -463,21 +468,21 @@
 					    greuler({
 						    target: '#greuler5',
 						    width: 400,
-						    height: 580,
+						    height: 550,
 						    avoidOverlaps: true,
 						    data: {
 							    nodes: [
-								    {id: 0, fill: '#C00000', r: 25, label: 'M1-1', fixed: true, x: 190, y: 250},
-								    {id: 1, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 100, y: 200},
-								    {id: 2, fill: '#C00000', r: 25, label: 'M1-2', fixed: true, x: 100, y: 100},
-								    {id: 3, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 190, y: 50},
-								    {id: 4, fill: '#C00000', r: 25, label: 'M1-3', fixed: true, x: 280, y: 100},
-								    {id: 5, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 280, y: 200},
-								    {id: 6, fill: '#C00000', r: 25, label: 'M1-4', fixed: true, x: 190, y: 550},
-								    {id: 7, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 100, y: 500},
-								    {id: 8, fill: '#C00000', r: 25, label: 'M1-5', fixed: true, x: 100, y: 400},
-								    {id: 9, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 190, y: 350},
-								    {id: 10, fill: '#C00000', r: 25, label: 'M1-6', fixed: true, x: 280, y: 400}
+								    {id: 0, fill: '#C00000', r: 25, label: 'M1-1', fixed: true, x: 190, y: 225},
+								    {id: 1, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 100, y: 175},
+								    {id: 2, fill: '#C00000', r: 25, label: 'M1-2', fixed: true, x: 100, y: 75},
+								    {id: 3, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 190, y: 25},
+								    {id: 4, fill: '#C00000', r: 25, label: 'M1-3', fixed: true, x: 280, y: 75},
+								    {id: 5, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 280, y: 175},
+								    {id: 6, fill: '#C00000', r: 25, label: 'M1-4', fixed: true, x: 190, y: 525},
+								    {id: 7, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 100, y: 475},
+								    {id: 8, fill: '#C00000', r: 25, label: 'M1-5', fixed: true, x: 100, y: 375},
+								    {id: 9, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 190, y: 325},
+								    {id: 10, fill: '#C00000', r: 25, label: 'M1-6', fixed: true, x: 280, y: 375}
 
 							    ],
 							    links: [
@@ -499,7 +504,22 @@
 
 			    <div class="six columns">
 
-				    <p>Equation</p>
+				    <figure>
+					    <img src="resources/img/Opsahl2013_CTwoMode.png" style="width: 45%">
+					    <figcaption class="x-small">Global clustering coefficient</figcaption>
+				    </figure>
+
+				    <figure style="width: 80%" class="down-15">
+					    <img src="resources/img/Opsahl2013_CTwoModeLocal.png">
+					    <figcaption class="x-small">Local clustering coefficient</figcaption>
+				    </figure>
+
+				    <ul class="small down-25">
+					    <li>Based on 6-cycles as 2-mode representations of triads</li>
+					    <li>For global clustering coefficient one node set must be designated as primary (responsible for tie generation; first and last nodes of 4-paths)</li>
+					    <li>Local clustering coefficient undefined for nodes with two-mode degree < 2</li>
+					    <li>Range between 0 and 1 as the numerator is a subset of the denominator</li>
+				    </ul>
 
 			    </div>
 
@@ -510,7 +530,7 @@
         <div class="step">
 
 	        <h2>Bimodal Clustering Coefficient</h2>
-	        <h3 class="red up-25">6-cycles and 4-paths?</h3>
+	        <h3 class="red up-15">6-cycles and 4-paths?</h3>
 
             <div class="row down-25">
 
@@ -558,7 +578,7 @@
                     <ul>
                         <li>6-cycles for M1-1: 8</li>
                         <li>4-paths for M1-1: 6</li>
-	                    <li>→ Clustering Coefficient: range not necessarily 0 - 1</li>
+	                    <li><span class="red">→</span> Clustering Coefficient: range not necessarily 0 - 1</li>
 	                    <li class="down-50 substep">5-paths for M1-1: 8</li>
                     </ul>
 
@@ -571,11 +591,11 @@
 	    <div class="step">
 
 		    <h2>Bimodal Clustering Coefficient</h2>
-		    <h3 class="red up-25">6-cycles and 5-paths</h3>
+		    <h3 class="red up-15">6-cycles and 5-paths</h3>
 
 		    <div class="row down-25">
 
-			    <div class="four columns">
+			    <div class="five columns">
 
 				    <div id="greuler3"></div>
 				    <script>
@@ -587,18 +607,18 @@
 						    avoidOverlaps: true,
 						    data: {
 							    nodes: [
-								    {id: 0, fill: '#C00000', r: 25, label: 'M1-1', fixed: true, x: 190, y: 250},
-								    {id: 1, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 100, y: 200},
-								    {id: 2, fill: '#C00000', r: 25, label: 'M1-2', fixed: true, x: 100, y: 100},
-								    {id: 3, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 190, y: 50},
-								    {id: 4, fill: '#C00000', r: 25, label: 'M1-3', fixed: true, x: 280, y: 100},
-								    {id: 5, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 280, y: 200},
-								    {id: 6, fill: '#C00000', r: 25, label: 'M1-4', fixed: true, x: 190, y: 550},
-								    {id: 7, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 100, y: 500},
-								    {id: 8, fill: '#C00000', r: 25, label: 'M1-5', fixed: true, x: 100, y: 400},
-								    {id: 9, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 190, y: 350},
-								    {id: 10, fill: '#C00000', r: 25, label: 'M1-6', fixed: true, x: 280, y: 400},
-								    {id: 11, fill: '#222222', r: 25, label: 'M2-6', fixed: true, x: 280, y: 500}
+								    {id: 0, fill: '#C00000', r: 25, label: 'M1-1', fixed: true, x: 190, y: 225},
+								    {id: 1, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 100, y: 175},
+								    {id: 2, fill: '#C00000', r: 25, label: 'M1-2', fixed: true, x: 100, y: 75},
+								    {id: 3, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 190, y: 25},
+								    {id: 4, fill: '#C00000', r: 25, label: 'M1-3', fixed: true, x: 280, y: 75},
+								    {id: 5, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 280, y: 175},
+								    {id: 6, fill: '#C00000', r: 25, label: 'M1-4', fixed: true, x: 190, y: 525},
+								    {id: 7, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 100, y: 475},
+								    {id: 8, fill: '#C00000', r: 25, label: 'M1-5', fixed: true, x: 100, y: 375},
+								    {id: 9, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 190, y: 325},
+								    {id: 10, fill: '#C00000', r: 25, label: 'M1-6', fixed: true, x: 280, y: 375},
+								    {id: 11, fill: '#222222', r: 25, label: 'M2-6', fixed: true, x: 280, y: 475}
 
 							    ],
 							    links: [
@@ -619,16 +639,14 @@
 				    </script>
 			    </div>
 
-			    <div class="eight columns">
+			    <div class="seven columns">
 
 				    <ul class="medium">
-					    <li>Graph-theoretical: more branches in 6-cycles than in 4-paths, if network strongly connected; 5-paths same amount of branches as 6-cycles → coefficient between 0 and 1</li>
-					    <li>Network-theoretical: 5-paths give possible relationships between 3 nodes, not just general possibility of relationship</li>
-					    <li>Opsahl not necessarily wrong, just different interpretation, coefficient not between 0 and 1</li>
-					    <li>equivalent to squares/possible squares</li>
-					    <li>Clustering coefficient concept native to bimodal case</li>
-					    <!-- TODO: Umformulieren; Folie mit zwei verschiedenen Strukturen > Triade auch hier nochmal davor, dann später nochmal drauf eingehen -->
+					    <li>Graph-theoretical: more branches in 6-cycles than in 4-paths, if network strongly connected; 5-paths same amount of branches as 6-cycles <span class="red">→</span> coefficient between 0 and 1</li>
+					    <li>Network-theoretical: Analogous to 3-paths and squares, 5-paths give more information about nature of possible connections</li>
 				    </ul>
+
+				    <p class="medium"><span class="red">→</span> Different approach to clustering coefficient with 6-cycles</p>
 
 			    </div>
 
@@ -639,37 +657,36 @@
 	    <div class="step">
 
 		    <h2>Bimodal Clustering Coefficient</h2>
-		    <h3 class="red up-25">6-cycles and stars</h3>
+		    <h3 class="red up-15">6-cycles and stars</h3>
 
 		    <div class="row down-25">
-			    <div class="seven columns">
+			    <div class="six columns">
 
 				    <div id="greuler6"></div>
 				    <script>
 					    'use strict';
 					    greuler({
 						    target: '#greuler6',
-						    width: 570,
+						    width: 460,
 						    height: 580,
 						    avoidOverlaps: true,
 						    data: {
 							    nodes: [
-								    {id: 0, fill: '#C00000', r: 25, label: 'M1-1', fixed: true, x: 120, y: 250},
-								    {id: 1, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 30, y: 200},
-								    {id: 2, fill: '#C00000', r: 25, label: 'M1-2', fixed: true, x: 30, y: 100},
-								    {id: 3, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 120, y: 50},
-								    {id: 4, fill: '#C00000', r: 25, label: 'M1-3', fixed: true, x: 210, y: 100},
-								    {id: 5, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 210, y: 200},
-								    {id: 6, fill: '#C00000', r: 25, label: 'M1-4', fixed: true, x: 120, y: 450},
-								    {id: 7, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 30, y: 530},
-								    {id: 8, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 120, y: 350},
-								    {id: 9, fill: '#222222', r: 25, label: 'M2-6', fixed: true, x: 210, y: 530},
-								    {id: 10, fill: '#222222', r: 25, label: 'M2-1', fixed: true, x: 350, y: 200},
-								    {id: 11, fill: '#222222', r: 25, label: 'M2-2', fixed: true, x: 440, y: 50},
-								    {id: 12, fill: '#222222', r: 25, label: 'M2-3', fixed: true, x: 530, y: 200},
-								    {id: 13, fill: '#222222', r: 25, label: 'M2-4', fixed: true, x: 350, y: 530},
-								    {id: 14, fill: '#222222', r: 25, label: 'M2-5', fixed: true, x: 440, y: 350},
-								    {id: 15, fill: '#222222', r: 25, label: 'M2-6', fixed: true, x: 530, y: 530}
+								    {id: 0, fill: '#C00000', r: 20, label: ' ', fixed: true, x: 110, y: 215},
+								    {id: 1, fill: '#222222', r: 20, label: '2', fixed: true, x: 30, y: 165},
+								    {id: 2, fill: '#C00000', r: 20, label: ' ', fixed: true, x: 30, y: 65},
+								    {id: 3, fill: '#222222', r: 20, label: '1', fixed: true, x: 110, y: 25},
+								    {id: 4, fill: '#C00000', r: 20, label: ' ', fixed: true, x: 200, y: 65},
+								    {id: 5, fill: '#222222', r: 20, label: '3', fixed: true, x: 200, y: 165},
+
+								    {id: 6, fill: '#C00000', label: ' ', r: 20, fixed: true, x: 350, y: 105},
+								    {id: 7, fill: '#222222', label: '2', r: 20, fixed: true, x: 270, y: 165},
+								    {id: 8, fill: '#222222', label: '1', r: 20, fixed: true, x: 350, y: 25},
+								    {id: 9, fill: '#222222', label: '3', r: 20, fixed: true, x: 430, y: 165},
+
+								    {id: 10, fill: '#222222', label: '2', r: 20, fixed: true, x: 30, y: 440},
+								    {id: 11, fill: '#222222', label: '1', r: 20, fixed: true, x: 110, y: 300},
+								    {id: 12, fill: '#222222', label: '3', r: 20, fixed: true, x: 200, y: 440}
 
 							    ],
 							    links: [
@@ -684,32 +701,28 @@
 								    {source: 6, target: 9},
 								    {source: 10, target: 11},
 								    {source: 11, target: 12},
-								    {source: 12, target: 10},
-								    {source: 13, target: 14},
-								    {source: 14, target: 15},
-								    {source: 15, target: 13}
+								    {source: 12, target: 10}
 							    ]
 						    }
 					    }).update()
 				    </script>
 			    </div>
 
-			    <div class="five columns">
+			    <div class="six columns">
 
 				    <p class="medium">Preliminary results use case:</p>
 				    <ul class="medium">
 					    <li>Projection Objects: <strong>30,90%</strong> of triads from 6-cycles, <strong>69,10%</strong> from stars</li>
 					    <li>Projection Graves: <strong>74,53%</strong> of triads from 6-cycles, <strong>25,47%</strong> from stars</li>
+					    <li>Contextualize with other measures, e.g. degree distributions:</li>
 				    </ul>
 
-			    </div>
-		    </div>
-	    </div>
+				    <figure class="mfp-lightbox" style="width: 65%">
+					    <a href="resources/img/DegreeDistrBothModes.png"><img src="resources/img/DegreeDistrBothModes.png"></a>
+					    <figcaption class="x-small line-height-one">Degree Distribution (preliminary data). Green - object types, red - graves</figcaption>
+				    </figure>
 
-	    <div class="step">
-		    <div class="centered">
-			    <h1>F I N I S</h1>
-			    <h2>Thank you</h2>
+			    </div>
 		    </div>
 	    </div>
 
@@ -722,14 +735,14 @@
 		    <dl class="x-small">
 			    <dt>Latapy et al. 2008</dt>
 			    <dd><a href="http://dx.doi.org/10.1016/j.socnet.2007.04.006">M. Latap/C. Magnien/N. Del Vecchio, Basic notions for the analysis of large two-mode networks. Social Networks 30, 2008, 31–48</a></dd>
-			    <dt>Lind et al. 2005</dt>
-			    <dd><a href="http://dx.doi.org/10.1103/PhysRevE.72.056127">P. G. Lind/M. C. González/H. J. Herrmann, Cycles and clustering in bipartite networks. Physical Review E 72, 2005, 056127-1 - 056127-9</a></dd>
 			    <dt>Opsahl 2013</dt>
 			    <dd><a href="http://dx.doi.org/10.1016/j.socnet.2011.07.001">T. Opsahl, Triadic closure in two-mode networks: Redefining the global and local clustering coefficients. Social Networks 35, 2013, 159–167</a></dd>
 			    <dt>Robins/Alexander 2004</dt>
 			    <dd><a href="http://dx.doi.org/10.1023/B:CMOT.0000032580.12184.c0">G. Robins/M. Alexander, Small Worlds Among Interlocking Directors: Network Structure and Distance in Bipartite Graphs. Computational & Mathematical Organization Theory, 10, 2004, 69–94</a></dd>
 			    <dt>Watts/Strogatz 1998</dt>
 			    <dd><a href="http://dx.doi.org/10.1038/30918">D. J. Watts, S. H. Strogatz, Collective dynamics of ‘small-world’ networks. Nature 393, 1998, 440–442</a></dd>
+			    <dt>Zhang et al. 2008</dt>
+			    <dd><a href="http://dx.doi.org/10.1016/j.physa.2008.09.006">Zhang, P./Wang, J./Li, X./Li, M./Di, Z./Fan, Y., Clustering coefficient and community structure of bipartite networks. Physica A 387, 2008, 6869–6875</a></dd>
 		    </dl>
 
 		    <div class="row">
@@ -769,6 +782,13 @@
 
 		    </div>
 
+	    </div>
+
+	    <div class="step">
+		    <div class="centered">
+			    <h1>F I N I S</h1>
+			    <h2>Thank you</h2>
+		    </div>
 	    </div>
 
     </div>
